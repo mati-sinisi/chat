@@ -1,11 +1,11 @@
 import { join } from 'path';
-
 import { Module } from '@nestjs/common';
-import { ServeStaticModule } from '@nestjs/serve-static';
-import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
 import { ChatModule } from './chat/chat.module';
+import { UserModule } from './user/user.module';
 import { ConversationModule } from './conversation/conversation.module';
 
 @Module({
@@ -16,7 +16,8 @@ import { ConversationModule } from './conversation/conversation.module';
     }),
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI),
-    ConversationModule
+    ConversationModule,
+    UserModule
   ]
 })
 export class AppModule {}
