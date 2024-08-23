@@ -1,5 +1,9 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import { IsEmail, IsNotEmpty, IsStrongPassword, IsUrl } from "class-validator";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+
+import { HydratedDocument } from 'mongoose';
+import { IsEmail, IsNotEmpty, IsStrongPassword, IsUrl } from 'class-validator';
+
+export type UserDocument = HydratedDocument<User>;
 
 @Schema()
 export class User {
@@ -20,4 +24,4 @@ export class User {
   photo: string;
 }
 
-export const UserSchema = SchemaFactory.createForClass(User)
+export const UserSchema = SchemaFactory.createForClass(User);
