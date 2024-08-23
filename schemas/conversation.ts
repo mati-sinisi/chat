@@ -1,5 +1,5 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { randomUUID } from 'crypto';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 import mongoose, { HydratedDocument } from 'mongoose';
 
