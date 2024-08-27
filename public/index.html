@@ -1,48 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat personal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Chat personal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' />
-  <link rel="stylesheet" href="css/styles.css">
-
-</head>
-
-<body>
-
-
-  <div class="center">
-
-      <!-- Inputs y Forms -->
+  <body>
+    <!-- SITE UNDER CONSTRUCTION -->
+    <header>
+      <h1>SITE UNDER CONSTRUCTION</h1>
+    </header>
+    <p>Test users:</p>
+    <p>Username: MCS1</p>
+    <p>Username: MCS2</p>
+    <p>Default password: Mcs++123456</p>
+    <div class="center">
       <form class="form" onsubmit="">
-        <input placeholder="Tu nombre" type="text" />
+        <input id="username" placeholder="Username" type="text" />
+        <div class="password-container">
+          <input id="password" placeholder="Password" type="password" />
+          <i class="fas fa-eye" id="togglePassword"></i>
+        </div>
+        <button type="submit">Log in</button>
+        <a href="#" class="forgot-password">Lost password?</a>
       </form>
-
-
     </div>
-  </div>
 
+    <div id="createUserModal" class="modal">
+      <div class="modal-content">
+        <h2>User Not Found</h2>
+        <p>Would you like to create a new user with these credentials?</p>
+        <button id="createUserBtn">Create User</button>
+        <button id="cancelCreateUserBtn">Cancel</button>
+      </div>
+    </div>
 
-  <script>
-
-    const form = document.querySelector('.form');
-    const input = document.querySelector('input');
-
-    form.addEventListener( 'submit', (e) => {
-      e.preventDefault();
-      const name = input.value;
-      if ( name ) {
-        localStorage.setItem('name', name);
-        window.location.href = 'chat.html';
-      }
-    })
-
-
-  </script>
-
-
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>

@@ -1,16 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,900&display=swap');
 
 .hidden {
   display: none;
 }
 
-body, html {
-  font-family: Red hat Display, sans-serif;
+body,
+html {
+  font-family:
+    Red hat Display,
+    sans-serif;
   font-weight: 400;
   line-height: 1.25em;
   letter-spacing: 0.025em;
   color: #333;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .information-bubble {
@@ -24,12 +27,21 @@ body, html {
   color: red;
 }
 
-.form input{
-  padding: 10px;
-  width: 250px;
-  border-radius: 15px;
+/* Under construction cartel */
+
+header {
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #f1f10d;
 }
 
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* Form */
 
 .center {
   display: flex;
@@ -38,7 +50,106 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #f5f5f5; /* Light gray background */
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background-color: white;
+  padding: 10%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: min(300px, 90vw);
+  max-width: 400px;
+  text-align: center;
+}
+
+.form input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Blue color for the button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.form .forgot-password {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form .forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* PASSWORD */
+.password-container {
+  position: relative;
+}
+
+.password-container i {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
+
+/* Create new user modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}w
+
+/* CHAT */
 
 .bottom-right {
   position: absolute;
@@ -72,11 +183,11 @@ body, html {
   margin-bottom: 0.125rem;
 }
 
-.contact .message, .contact .seen {
+.contact .message,
+.contact .seen {
   font-size: 0.9rem;
   color: #999;
 }
-
 
 .chat {
   position: relative;
@@ -89,7 +200,9 @@ body, html {
   box-sizing: border-box;
   border-radius: 1rem;
   background: white;
-  box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 8rem 0 rgba(0, 0, 0, 0.1),
+    0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
 }
 
 .chat .contact.bar {
@@ -101,15 +214,17 @@ body, html {
 
 .chat .messages {
   padding: 1rem;
-  background: #F7F7F7;
+  background: #f7f7f7;
   flex-shrink: 2;
   overflow-y: auto;
   min-height: 420px;
-  box-shadow: inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.05), inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.05);
+  box-shadow:
+    inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.05),
+    inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.05);
 }
 .chat .messages .time {
   font-size: 0.8rem;
-  background: #EEE;
+  background: #eee;
   padding: 0.25rem 1rem;
   border-radius: 2rem;
   color: #999;
@@ -122,14 +237,16 @@ body, html {
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   margin: 1rem;
-  background: #FFF;
+  background: #fff;
   border-radius: 1.125rem 1.125rem 1.125rem 0;
   min-height: 2.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 66%;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.075), 0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 0 2rem rgba(0, 0, 0, 0.075),
+    0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.1);
 }
 
 .chat .messages .message.incoming {
@@ -151,15 +268,15 @@ body, html {
 
 .chat .messages .message .typing.typing-1 {
   -webkit-animation: typing 3s infinite;
-          animation: typing 3s infinite;
+  animation: typing 3s infinite;
 }
 .chat .messages .message .typing.typing-2 {
   -webkit-animation: typing 3s 250ms infinite;
-          animation: typing 3s 250ms infinite;
+  animation: typing 3s 250ms infinite;
 }
 .chat .messages .message .typing.typing-3 {
   -webkit-animation: typing 3s 500ms infinite;
-          animation: typing 3s 500ms infinite;
+  animation: typing 3s 500ms infinite;
 }
 .chat .input {
   box-sizing: border-box;
@@ -187,8 +304,12 @@ body, html {
   margin-right: 1rem;
   border-radius: 1.125rem;
   flex-grow: 2;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1), 0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.2);
-  font-family: Red hat Display, sans-serif;
+  box-shadow:
+    0 0 1rem rgba(0, 0, 0, 0.1),
+    0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.2);
+  font-family:
+    Red hat Display,
+    sans-serif;
   font-weight: 400;
   letter-spacing: 0.025em;
 }
@@ -197,7 +318,9 @@ body, html {
 }
 
 @-webkit-keyframes typing {
-  0%, 75%, 100% {
+  0%,
+  75%,
+  100% {
     transform: translate(0, 0.25rem) scale(0.9);
     opacity: 0.5;
   }
@@ -208,7 +331,9 @@ body, html {
 }
 
 @keyframes typing {
-  0%, 75%, 100% {
+  0%,
+  75%,
+  100% {
     transform: translate(0, 0.25rem) scale(0.9);
     opacity: 0.5;
   }
@@ -218,5 +343,5 @@ body, html {
   }
 }
 .pic.stark {
-  background-image: url("https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/7/73/SMH_Mentor_6.png");
+  background-image: url('https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/7/73/SMH_Mentor_6.png');
 }
