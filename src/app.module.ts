@@ -7,6 +7,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { ChatModule } from './chat/chat.module';
 import { UserModule } from './user/user.module';
 import { ConversationModule } from './conversation/conversation.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { ConversationModule } from './conversation/conversation.module';
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI),
     ConversationModule,
-    UserModule
+    UserModule,
+    AuthModule
   ]
 })
 export class AppModule {}
